@@ -164,3 +164,50 @@ footer small {
     padding-top: 0;
   }
 }
+
+/* 2026-09-25: restore desktop section separators and tighten mobile transitions */
+@media (min-width: 801px) {
+  .hero {
+    position: relative;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    left: 7vw;
+    right: 7vw;
+    bottom: 0;
+    height: 1px;
+    background: #cbbcaf;
+  }
+
+  .about {
+    position: relative;
+  }
+
+  .about::after {
+    content: "";
+    position: absolute;
+    left: 7vw;
+    right: 7vw;
+    bottom: 0;
+    height: 1px;
+    background: #cbbcaf;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    padding-bottom: 32px;
+  }
+
+  .about {
+    padding-top: 34px;
+    padding-bottom: 42px;
+  }
+
+  .mobile-signup-section {
+    padding-top: 34px;
+    padding-bottom: 52px;
+  }
+}
