@@ -20,10 +20,10 @@
         <p class="hero-question">What’s your relationship with alcohol, and is it the one you want?</p>
         <p class="dek">A forthcoming nonfiction book that challenges the way we think about alcohol by asking what happens when we examine it like any other relationship in our lives.</p>
 
-        <div class="signup">
+        <div class="signup signup-desktop">
           <h2>Stay in the Relationship</h2>
           <p>Get occasional updates on <em>The Booze Breakup</em>, release news, and what's coming next.</p>
-          <form id="signup-form" action="https://assets.mailerlite.com/jsonp/2660817/forms/199604704153437531/subscribe" method="post">
+          <form class="signup-form" action="https://assets.mailerlite.com/jsonp/2660817/forms/199604704153437531/subscribe" method="post">
             <input type="email" name="fields[email]" placeholder="Email address" aria-label="Email address" required>
             <input type="hidden" name="ml-submit" value="1">
             <input type="hidden" name="anticsrf" value="true">
@@ -46,31 +46,46 @@
     </section>
   </main>
 
+  <section class="mobile-signup-section">
+    <div class="signup signup-mobile">
+      <h2>Stay in the Relationship</h2>
+      <p>Get occasional updates on <em>The Booze Breakup</em>, release news, and what's coming next.</p>
+      <form class="signup-form" action="https://assets.mailerlite.com/jsonp/2660817/forms/199604704153437531/subscribe" method="post">
+        <input type="email" name="fields[email]" placeholder="Email address" aria-label="Email address" required>
+        <input type="hidden" name="ml-submit" value="1">
+        <input type="hidden" name="anticsrf" value="true">
+        <button type="submit">Join the Relationship</button>
+      </form>
+    </div>
+  </section>
+
+
   <footer>
-    <div>THE BOOZE BREAKUP</div>
+    <div>THE BOOZE BREAKUP™™</div>
     <nav><a href="https://x.com/theboozebreakup">X</a><a href="https://www.instagram.com/theboozebreakup">Instagram</a></nav>
     <small>© 2026 The Booze Breakup. All rights reserved.</small>
   </footer>
 
   <script>
-    const signupForm = document.getElementById('signup-form');
-    signupForm.addEventListener('submit', async function (event) {
-      event.preventDefault();
-      const button = signupForm.querySelector('button[type="submit"]');
-      button.disabled = true;
-      button.textContent = 'Joining...';
-      try {
-        await fetch(signupForm.action, {
-          method: 'POST',
-          body: new FormData(signupForm),
-          mode: 'no-cors'
-        });
-        window.location.href = '/success.html';
-      } catch (error) {
-        button.disabled = false;
-        button.textContent = 'Join the Relationship';
-        alert('Something went wrong. Please try again.');
-      }
+    document.querySelectorAll('.signup-form').forEach(function (signupForm) {
+      signupForm.addEventListener('submit', async function (event) {
+        event.preventDefault();
+        const button = signupForm.querySelector('button[type="submit"]');
+        button.disabled = true;
+        button.textContent = 'Joining...';
+        try {
+          await fetch(signupForm.action, {
+            method: 'POST',
+            body: new FormData(signupForm),
+            mode: 'no-cors'
+          });
+          window.location.href = '/success.html';
+        } catch (error) {
+          button.disabled = false;
+          button.textContent = 'Join the Relationship';
+          alert('Something went wrong. Please try again.');
+        }
+      });
     });
   </script>
 </body>

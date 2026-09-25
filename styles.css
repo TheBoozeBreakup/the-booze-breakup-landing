@@ -93,3 +93,77 @@
     margin-bottom: 20px;
   }
 }
+
+
+/* Final responsive layout */
+.mobile-signup-section {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer > div {
+  width: 100%;
+  margin-right: 0;
+  text-align: center;
+}
+
+footer nav {
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  .signup-desktop {
+    display: none !important;
+  }
+
+  .mobile-signup-section {
+    display: block;
+    padding: 48px 24px 56px;
+    border-top: 1px solid rgba(92, 78, 67, .22);
+  }
+
+  .mobile-signup-section .signup {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .about {
+    padding-bottom: 48px;
+  }
+
+  .about h2 {
+    font-size: clamp(1.58rem, 7.4vw, 2.35rem);
+    line-height: 1.16;
+    margin-bottom: 28px;
+  }
+
+  .about .eyebrow {
+    margin-bottom: 22px;
+  }
+
+  footer {
+    text-align: center;
+    align-items: center;
+  }
+
+  footer nav {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 801px) {
+  .signup-desktop {
+    display: block !important;
+  }
+
+  .mobile-signup-section {
+    display: none !important;
+  }
+}
