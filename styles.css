@@ -141,3 +141,61 @@
     width:100%;
   }
 }
+
+
+/* Spacing cleanup */
+.signup-section{
+  border-top:0;
+}
+
+@media(max-width:800px){
+  /* Bring major sections closer together */
+  .hero{
+    padding-bottom:34px;
+  }
+
+  .about{
+    padding-top:34px;
+    padding-bottom:44px;
+  }
+
+  /* One divider only, with tighter transition into signup */
+  .signup-section{
+    border-top:0;
+    padding:36px 24px 72px;
+  }
+
+  .signup-section .signup{
+    border-top:1px solid #cfc3b3;
+    padding-top:34px;
+  }
+
+  /* Slightly more breathing room before footer */
+  .signup-section .signup form{
+    margin-bottom:10px;
+  }
+}
+
+
+/* Mobile typography refinement */
+@media(max-width:800px){
+  .hero h1{
+    font-size:clamp(2rem,8.5vw,3rem);
+    line-height:1.01;
+  }
+
+  .hero-question{
+    font-size:clamp(1.08rem,4.7vw,1.34rem);
+    line-height:1.28;
+  }
+
+  .about h2{
+    font-size:clamp(1.55rem,7.25vw,2.25rem);
+    line-height:1.14;
+  }
+
+  .signup-section .signup h2{
+    font-size:clamp(1.72rem,7.4vw,2rem);
+    white-space:nowrap;
+  }
+}
