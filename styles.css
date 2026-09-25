@@ -82,29 +82,15 @@
 }
 
 
-/* Desktop section spacing refinement */
-@media (min-width: 801px) {
-  .about {
-    padding-top: 44px;
-    padding-bottom: 34px;
-  }
-
-  .about h2 {
-    margin-bottom: 20px;
-  }
-}
-
-
-/* Responsive signup placement: preserves existing desktop layout */
+/* FINAL: responsive signup placement and centered footer */
 .mobile-signup-section {
-  display: none;
+  display: none !important;
 }
 
-/* Footer alignment only */
 footer {
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -118,22 +104,28 @@ footer nav {
   justify-content: center;
 }
 
+footer small {
+  text-align: center;
+}
+
 @media (max-width: 800px) {
   .signup-desktop {
     display: none !important;
   }
 
   .mobile-signup-section {
-    display: block;
-    padding: 48px 24px 56px;
-    background: var(--cream, #f5efe5);
+    display: block !important;
+    padding: 46px 24px 56px;
+    background: #f4efe6;
   }
 
   .mobile-signup-section .signup {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
+    max-width: none;
+    margin: 0;
+  }
+
+  .mobile-signup-section .signup form {
+    flex-direction: column;
   }
 }
 
@@ -144,5 +136,31 @@ footer nav {
 
   .mobile-signup-section {
     display: none !important;
+  }
+}
+
+
+/* Mobile section separators and spacing */
+@media (max-width: 800px) {
+  .hero {
+    padding-bottom: 46px;
+    border-bottom: 1px solid #cbbcaf;
+  }
+
+  .about {
+    padding-top: 50px;
+    padding-bottom: 54px;
+    border-bottom: 1px solid #cbbcaf;
+  }
+
+  .mobile-signup-section {
+    padding-top: 44px;
+    padding-bottom: 52px;
+  }
+
+  /* The section border above now provides the separator */
+  .mobile-signup-section .signup {
+    border-top: 0;
+    padding-top: 0;
   }
 }
