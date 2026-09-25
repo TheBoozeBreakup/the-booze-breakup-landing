@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="The Booze Breakup - What Happens When We Treat Alcohol Like a Relationship Instead of a Substance">
+  <title>The Booze Breakup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="copy">
+        <div class="eyebrow">THE BOOZE BREAKUP</div>
+        <h1>Everyone has a relationship with alcohol.</h1>
+        <p class="hero-question">What’s your relationship with alcohol, and is it the one you want?</p>
+        <p class="dek">A forthcoming nonfiction book that challenges the way we think about alcohol by asking what happens when we examine it like any other relationship in our lives.</p>
+
+        <div class="signup signup-desktop">
+          <h2>Stay in the Relationship</h2>
+          <p>Get occasional updates on <em>The Booze Breakup</em>, release news, and what's coming next.</p>
+          <form class="signup-form" action="https://assets.mailerlite.com/jsonp/2660817/forms/199604704153437531/subscribe" method="post">
+            <input type="email" name="fields[email]" placeholder="Email address" aria-label="Email address" required>
+            <input type="hidden" name="ml-submit" value="1">
+            <input type="hidden" name="anticsrf" value="true">
+            <button type="submit">Join the Relationship</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="bookwrap">
+        <img src="book.jpg" alt="The Booze Breakup book concept">
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="about-kicker">THE BOOZE BREAKUP STARTS WITH A DIFFERENT IDEA:</div>
+      <h2>Before deciding what role alcohol should play in your life, understand your current relationship with it.</h2>
+      <div class="bodycopy">
+        <p><em>The Booze Breakup</em> looks at alcohol through the lens of relationships, curiosity, and personal reflection rather than black-and-white labels. It’s not anti-alcohol or prescriptive about quitting. Drawing from personal experience, years of conversations, and stories from people whose Booze Breakups led to different outcomes, the book invites readers to examine their own relationship with alcohol without being told what that relationship should become.</p>
+      </div>
+    </section>
+
+    <section class="mobile-signup-wrap">
+      <div class="signup signup-mobile">
+        <h2>Stay in the Relationship</h2>
+        <p>Get occasional updates on <em>The Booze Breakup</em>, release news, and what's coming next.</p>
+        <form class="signup-form" action="https://assets.mailerlite.com/jsonp/2660817/forms/199604704153437531/subscribe" method="post">
+          <input type="email" name="fields[email]" placeholder="Email address" aria-label="Email address" required>
+          <input type="hidden" name="ml-submit" value="1">
+          <input type="hidden" name="anticsrf" value="true">
+          <button type="submit">Join the Relationship</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>THE BOOZE BREAKUP</div>
+    <nav><a href="https://x.com/theboozebreakup">X</a><a href="https://www.instagram.com/theboozebreakup">Instagram</a></nav>
+    <small>© 2026 The Booze Breakup. All rights reserved.</small>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.signup-form').forEach(function (signupForm) {
+      signupForm.addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        const button = signupForm.querySelector('button[type="submit"]');
+        button.disabled = true;
+        button.textContent = 'Joining...';
+
+        try {
+          await fetch(signupForm.action, {
+            method: 'POST',
+            body: new FormData(signupForm),
+            mode: 'no-cors'
+          });
+
+          window.location.href = '/success.html';
+        } catch (error) {
+          button.disabled = false;
+          button.textContent = 'Join the Relationship';
+          alert('Something went wrong. Please try again.');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

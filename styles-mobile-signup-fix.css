@@ -1,0 +1,118 @@
+*{box-sizing:border-box}html,body{margin:0}body{background:#f4efe6;color:#171513;font-family:'DM Sans',sans-serif}.hero{min-height:100vh;max-width:1440px;margin:auto;padding:64px 7vw 72px;display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:6vw}.copy{max-width:610px}.eyebrow{font-size:.82rem;font-weight:700;letter-spacing:.22em;color:#8f171b;margin-bottom:18px}.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,4vw,4.15rem);line-height:1.04;letter-spacing:-.035em;margin:0 0 24px}.dek{color:#665f58;max-width:590px;font-size:1.08rem;line-height:1.7;margin:0 0 42px}.bookwrap{text-align:center}.bookwrap img{width:min(100%,650px);max-height:82vh;object-fit:contain;filter:drop-shadow(0 22px 28px rgba(45,31,20,.12))}.signup{border-top:1px solid #cbbcaf;padding-top:26px;max-width:610px}.signup h2{font-family:'Playfair Display',serif;font-size:1.6rem;margin:0 0 6px}.signup p{color:#665f58;margin:0 0 15px;font-size:.9rem;white-space:nowrap}.signup form{display:flex;gap:10px}.signup input{flex:1;min-width:0;padding:14px 16px;border:1px solid #cbbcaf;background:#fffaf3;border-radius:3px;font:inherit}.signup input:focus{outline:2px solid rgba(150,27,32,.22);border-color:#961b20}.signup button{padding:14px 20px;border:0;border-radius:3px;background:#961b20;color:white;font-weight:700;cursor:pointer;white-space:nowrap}.about{padding:105px 7vw 120px;max-width:1040px;margin:auto;text-align:center}
+.about-intro {
+  font-size: 1.05rem;
+  margin: 0 0 18px;
+  color: #4b423d;
+}
+.about h2{font-family:'Playfair Display',serif;color:#961b20;font-size:clamp(2rem,4vw,3.35rem);line-height:1.18;margin:0 auto 42px;max-width:1040px}.bodycopy{max-width:790px;margin:0 auto;text-align:left;color:#554f49;line-height:1.8;font-size:1.04rem}.bodycopy p{margin:0 0 22px}.bodycopy p:last-child{margin-bottom:0}footer{background:#171513;color:#f4efe6;padding:42px 7vw;display:flex;align-items:center;gap:28px;flex-wrap:wrap;font-size:.86rem;letter-spacing:.05em}footer>div{font-weight:700;letter-spacing:.15em;margin-right:auto}footer nav{display:flex;gap:24px}footer a{color:#f4efe6;text-decoration:none}footer small{width:100%;color:#aaa29a}@media(max-width:900px){.signup p{white-space:normal}}@media(max-width:800px){.hero{grid-template-columns:1fr;padding:44px 24px 60px;gap:30px}.bookwrap{grid-row:1}.copy{grid-row:2;max-width:none}.bookwrap img{max-height:54vh}.hero h1{font-size:clamp(2.45rem,11vw,4rem)}.signup form{flex-direction:column}.signup p{white-space:normal}.about{padding:72px 24px 82px}.bodycopy{max-width:790px}footer{padding:38px 24px}}
+
+@media(max-width:800px){.desktop-break{display:none}}
+
+@media(min-width:801px){.about{max-width:1240px}.about h2{max-width:1240px;font-size:clamp(2rem,3.5vw,3.2rem)}.question-line{display:block;white-space:nowrap}}
+@media(max-width:800px){.question-line{display:inline}.question-line+ .question-line:before{content:" "}}
+
+/* V9: refined three-tier hero */
+.hero-question{
+  font-family:'Playfair Display',serif;
+  color:#961b20;
+  font-size:clamp(1.35rem,2vw,1.85rem);
+  line-height:1.28;
+  margin:0 0 18px;
+  max-width:590px;
+}
+.about h2{max-width:900px}
+@media(max-width:800px){
+  .hero-question{font-size:clamp(1.3rem,6vw,1.7rem)}
+}
+
+/* V13: section-two eyebrow */
+.about-kicker{font-size:.78rem;font-weight:700;letter-spacing:.2em;color:#6f655e;margin:0 0 18px;text-transform:uppercase}
+@media(max-width:800px){.about-kicker{font-size:.72rem;line-height:1.5;margin-bottom:14px}}
+
+
+
+
+/* Reduce the desktop gap between the hero and second section */
+@media(min-width:801px){
+  .hero{
+    min-height:auto;
+    padding-bottom:54px;
+  }
+
+  .about{
+    padding-top:54px;
+  }
+}
+
+/* Mobile refinement: preserves desktop layout */
+@media(max-width:800px){
+  .hero h1{
+    font-size:clamp(2.15rem,9.5vw,3.35rem);
+    line-height:1.02;
+  }
+
+  .hero-question{
+    font-size:clamp(1.18rem,5.25vw,1.48rem);
+    line-height:1.3;
+  }
+
+  .about h2{
+    font-size:clamp(1.75rem,8.4vw,2.65rem);
+    line-height:1.16;
+    margin-bottom:32px;
+  }
+
+  .bodycopy{
+    font-size:.96rem;
+    line-height:1.65;
+  }
+
+  footer{
+    gap:20px;
+  }
+
+  footer>div{
+    width:100%;
+    margin-right:0;
+  }
+
+  footer nav{
+    gap:22px;
+  }
+}
+
+
+/* Desktop section spacing refinement */
+@media (min-width: 801px) {
+  .about {
+    padding-top: 44px;
+    padding-bottom: 34px;
+  }
+
+  .about h2 {
+    margin-bottom: 20px;
+  }
+}
+
+
+/* Responsive signup placement */
+.mobile-signup-wrap { display: none; }
+
+@media (max-width: 800px) {
+  .signup-desktop { display: none; }
+
+  .mobile-signup-wrap {
+    display: block;
+    padding: 0 24px 72px;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+
+  .signup-mobile {
+    max-width: none;
+  }
+}
+
+@media (min-width: 801px) {
+  .signup-desktop { display: block; }
+}
