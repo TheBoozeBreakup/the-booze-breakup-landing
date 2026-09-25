@@ -287,3 +287,77 @@
     padding-bottom:50px;
   }
 }
+
+/* V16: final spacing and divider refinement */
+@media(max-width:800px){
+  .hero{
+    padding-bottom:18px;
+  }
+
+  .about{
+    position:relative;
+    border-top:0;
+    padding-top:42px;
+    padding-bottom:28px;
+  }
+
+  .about::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:24px;
+    right:24px;
+    height:1px;
+    background:#cfc3b3;
+  }
+
+  .about-kicker{
+    margin-bottom:12px;
+  }
+
+  .about h2{
+    font-size:clamp(1.38rem,5.45vw,1.72rem);
+    line-height:1.12;
+    margin-bottom:20px;
+  }
+
+  .bodycopy{
+    font-size:.91rem;
+    line-height:1.56;
+  }
+
+  .signup-section{
+    padding:24px 24px 42px;
+  }
+
+  .signup-section .signup{
+    padding-top:26px;
+  }
+
+  .signup-section .signup form{
+    margin-bottom:0;
+  }
+
+  footer{
+    padding-top:40px;
+    padding-bottom:46px;
+  }
+}
+
+@media(min-width:801px){
+  .about{
+    position:relative;
+    border-top:0;
+    padding-top:48px;
+  }
+
+  .about::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:7vw;
+    right:7vw;
+    height:1px;
+    background:#cfc3b3;
+  }
+}
