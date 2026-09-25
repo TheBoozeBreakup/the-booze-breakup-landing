@@ -95,16 +95,17 @@
 }
 
 
-/* Final responsive layout */
+/* Responsive signup placement: preserves existing desktop layout */
 .mobile-signup-section {
   display: none;
 }
 
+/* Footer alignment only */
 footer {
-  text-align: center;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 footer > div {
@@ -125,36 +126,14 @@ footer nav {
   .mobile-signup-section {
     display: block;
     padding: 48px 24px 56px;
-    border-top: 1px solid rgba(92, 78, 67, .22);
+    background: var(--cream, #f5efe5);
   }
 
   .mobile-signup-section .signup {
     display: block;
+    width: 100%;
     max-width: 100%;
     margin: 0 auto;
-  }
-
-  .about {
-    padding-bottom: 48px;
-  }
-
-  .about h2 {
-    font-size: clamp(1.58rem, 7.4vw, 2.35rem);
-    line-height: 1.16;
-    margin-bottom: 28px;
-  }
-
-  .about .eyebrow {
-    margin-bottom: 22px;
-  }
-
-  footer {
-    text-align: center;
-    align-items: center;
-  }
-
-  footer nav {
-    justify-content: center;
   }
 }
 
