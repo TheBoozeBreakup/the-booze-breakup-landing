@@ -30,6 +30,20 @@
 @media(max-width:800px){.about-kicker{font-size:.72rem;line-height:1.5;margin-bottom:14px}}
 
 
+
+
+/* Reduce the desktop gap between the hero and second section */
+@media(min-width:801px){
+  .hero{
+    min-height:auto;
+    padding-bottom:54px;
+  }
+
+  .about{
+    padding-top:54px;
+  }
+}
+
 /* Mobile refinement: preserves desktop layout */
 @media(max-width:800px){
   .hero h1{
@@ -64,5 +78,66 @@
 
   footer nav{
     gap:22px;
+  }
+}
+
+
+/* Final signup section after the explanatory section */
+.signup-section{
+  padding:72px 24px 76px;
+  border-top:1px solid #cfc3b3;
+}
+
+.signup-section .signup{
+  width:min(760px,100%);
+  margin:0 auto;
+  text-align:center;
+}
+
+.signup-section .signup h2{
+  margin:0 0 14px;
+  font-size:clamp(2rem,4vw,3rem);
+  line-height:1.08;
+}
+
+.signup-section .signup p{
+  margin:0 auto 28px;
+  max-width:680px;
+}
+
+.signup-section .signup form{
+  width:min(620px,100%);
+  margin:0 auto;
+}
+
+@media(max-width:800px){
+  .signup-section{
+    padding:54px 24px 60px;
+  }
+
+  .signup-section .signup{
+    width:100%;
+    padding:0;
+  }
+
+  .signup-section .signup h2{
+    font-size:2rem;
+    line-height:1.08;
+    margin-bottom:14px;
+  }
+
+  .signup-section .signup p{
+    font-size:.98rem;
+    line-height:1.5;
+    margin-bottom:24px;
+  }
+
+  .signup-section .signup form{
+    width:100%;
+  }
+
+  .signup-section .signup input,
+  .signup-section .signup button{
+    width:100%;
   }
 }
