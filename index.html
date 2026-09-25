@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon.png">\n  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main>
@@ -19,16 +19,6 @@
         <p class="hero-question">What’s your relationship with alcohol, and is it the one you want?</p>
         <p class="dek">A forthcoming nonfiction book about one of the longest relationships many of us will have, and one we rarely stop to examine.</p>
 
-        <div class="signup">
-          <h2>Stay in the Relationship</h2>
-          <p>Get occasional updates on <em>The Booze Breakup</em>, release news, and what's coming next.</p>
-          <form action="https://assets.mailerlite.com/jsonp/2660817/forms/199604704153437531/subscribe" method="post" target="_blank">
-            <input type="email" name="fields[email]" placeholder="Email address" aria-label="Email address" required>
-            <input type="hidden" name="ml-submit" value="1">
-            <input type="hidden" name="anticsrf" value="true">
-            <button type="submit">Join the Relationship</button>
-          </form>
-        </div>
       </div>
 
       <div class="bookwrap">
@@ -43,6 +33,19 @@
         <p><em>The Booze Breakup</em> looks at alcohol through the lens of relationships, curiosity, and personal reflection rather than black-and-white labels. It’s not anti-alcohol or prescriptive about quitting. Drawing from personal experience, years of conversations, and stories from people who took their own breaks from alcohol, the book invites readers to take a closer look at a relationship that often goes unquestioned before deciding whether anything needs to change.</p>
       </div>
     </section>
+
+    <section class="signup-section">
+      <div class="signup">
+        <h2>Stay in the Relationship</h2>
+        <p>Get occasional updates on <em>The Booze Breakup</em>, release news, and what's coming next.</p>
+        <form id="signup-form" action="https://assets.mailerlite.com/jsonp/2660817/forms/199604704153437531/subscribe" method="post">
+          <input type="email" name="fields[email]" placeholder="Email address" aria-label="Email address" required>
+          <input type="hidden" name="ml-submit" value="1">
+          <input type="hidden" name="anticsrf" value="true">
+          <button type="submit">Join the Relationship</button>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -50,5 +53,31 @@
     <nav><a href="https://x.com/theboozebreakup">X</a><a href="https://www.instagram.com/theboozebreakup">Instagram</a></nav>
     <small>© 2026 The Booze Breakup. All rights reserved.</small>
   </footer>
+
+  <script>
+    const signupForm = document.getElementById('signup-form');
+
+    signupForm.addEventListener('submit', async function (event) {
+      event.preventDefault();
+
+      const button = signupForm.querySelector('button[type="submit"]');
+      button.disabled = true;
+      button.textContent = 'Joining...';
+
+      try {
+        await fetch(signupForm.action, {
+          method: 'POST',
+          body: new FormData(signupForm),
+          mode: 'no-cors'
+        });
+
+        window.location.href = '/success.html';
+      } catch (error) {
+        button.disabled = false;
+        button.textContent = 'Join the Relationship';
+        alert('Something went wrong. Please try again.');
+      }
+    });
+  </script>
 </body>
 </html>
