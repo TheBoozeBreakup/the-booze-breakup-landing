@@ -1,43 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Thank you for joining The Booze Breakup mailing list">
-    <title>Thank You - The Booze Breakup</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cheers, You’re In | The Booze Breakup</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    :root{--cream:#f4efe6;--ink:#171615;--wine:#9b2528;--muted:#665f57;--line:#cfc2b2}
+    *{box-sizing:border-box}html,body{margin:0;min-height:100%}
+    body{min-height:100vh;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;display:flex;flex-direction:column}
+    main{flex:1;display:flex;align-items:center;justify-content:center;padding:72px 24px}
+    .success{width:min(820px,100%);text-align:center}
+    .eyebrow{color:var(--wine);font-size:.82rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;margin-bottom:28px}
+    h1{margin:0;font-family:Georgia,'Times New Roman',serif;font-size:clamp(3.5rem,8vw,6.7rem);line-height:.98;letter-spacing:-.045em}
+    h2{margin:30px auto 20px;color:var(--wine);font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.75rem,3.6vw,2.5rem);font-weight:600;line-height:1.15}
+    p{max-width:650px;margin:0 auto;color:var(--muted);font-size:1.05rem;line-height:1.65}
+    .button{display:inline-block;margin-top:34px;padding:16px 25px;background:var(--wine);color:#fff;text-decoration:none;font-size:.9rem;font-weight:700;border-radius:3px}
+    .separator{width:min(1180px,calc(100% - 48px));height:1px;background:var(--line);margin:0 auto}
+    footer{background:#141312;color:#fff;text-align:center;padding:54px 24px 48px}
+    .brand{font-size:.9rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;margin-bottom:28px}
+    nav{display:flex;justify-content:center;gap:34px;margin-bottom:28px}
+    nav a{color:#fff;text-decoration:none;font-size:1rem}
+    .copyright{color:#aaa39b;font-size:.83rem;letter-spacing:.03em}
+    @media(max-width:600px){
+      main{align-items:flex-start;padding:58px 26px 86px}
+      .success{text-align:left}
+      .eyebrow{font-size:.78rem;margin-bottom:24px}
+      h1{font-size:clamp(3.25rem,15vw,4.7rem);line-height:.96}
+      h2{font-size:1.85rem;margin-top:28px;margin-bottom:18px}
+      p{font-size:1rem;line-height:1.65}
+      .button{width:100%;text-align:center;margin-top:30px;padding:17px 20px}
+      .separator{width:calc(100% - 52px)}
+      footer{padding:52px 26px 46px}
+      .brand{font-size:.82rem}
+      .copyright{font-size:.78rem;line-height:1.6}
+    }
+  </style>
 </head>
 <body>
-    <!-- Success Section -->
-    <section class="success-page">
-        <div class="success-content">
-            <h1 class="success-heading">You're in.</h1>
-            <p class="success-subheading">Thanks for staying in the relationship.</p>
-            <p class="success-description">
-                You'll get occasional updates on <em>The Booze Breakup</em>, release news, and what's coming next!
-            </p>
-        </div>
+  <main>
+    <section class="success">
+      <div class="eyebrow">THE BOOZE BREAKUP</div>
+      <h1>Cheers, You’re In.</h1>
+      <h2>Welcome to the Relationship.</h2>
+      <p>You’ll receive occasional updates on <em>The Booze Breakup</em>, release news, and what’s coming next.</p>
+      <a class="button" href="index.html">Back to The Booze Breakup</a>
     </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p class="footer-trademark">© 2026 The Booze Breakup. All rights reserved.<br><span class="trademark">The Booze Breakup™</span></p>
-            <div class="social-links">
-                <a href="https://x.com/theboozebreakup" target="_blank" rel="noopener noreferrer" class="social-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7"></path>
-                    </svg>
-                </a>
-                <a href="https://www.instagram.com/theboozebreakup" target="_blank" rel="noopener noreferrer" class="social-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
-                        <circle cx="17.5" cy="6.5" r="1.5"></circle>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </footer>
+  </main>
+  <div class="separator"></div>
+  <footer>
+    <div class="brand">THE BOOZE BREAKUP™</div>
+    <nav>
+      <a href="https://x.com/theboozebreakup">X</a>
+      <a href="https://www.instagram.com/theboozebreakup">Instagram</a>
+    </nav>
+    <div class="copyright">© 2026 The Booze Breakup. All rights reserved.</div>
+  </footer>
 </body>
 </html>
